@@ -54,7 +54,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
         String posterUrl = currentMovie.getPosterUrl();
         movieViewHolder.titleTextView.setText(title);
         movieViewHolder.yearTextView.setText(year);
-        Picasso.get().load(posterUrl).centerInside()
+        Picasso.get().load(posterUrl).fit().centerInside()
                 .into(movieViewHolder.posterImageView);
     }
 
